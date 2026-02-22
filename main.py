@@ -23,5 +23,8 @@ def home():
     response = requests.get(API_URL, params=params)
     data = requests.json()
 
-    jobs = data.get("jons", [])
-    return
+    jobs = data.get("jobs", [])
+    return render_template("index.html", jobs=jobs)
+
+if __name__ == "__main__":
+    app.run(debug=True)

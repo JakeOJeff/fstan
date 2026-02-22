@@ -24,7 +24,7 @@ def home():
     data = response.json()
 
     jobs = data.get("jobs", [])
-    return render_template("index.html", jobs=jobs)
+    return render_template("index.html", jobs=jobs, search=search, category = category, company = company)
 
 if __name__ == "__main__":
     app.run(debug=True)

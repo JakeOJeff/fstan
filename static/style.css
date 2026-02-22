@@ -106,6 +106,15 @@ body {
     margin-top: 10px;
 }
 
+.job-card .info {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.job-card:hover .info {
+    max-height: 200px; /* adjust based on content */
+}
 .job-card .tag {
     display: inline-block;
     background: #2a2a40;

@@ -10,11 +10,15 @@
     <h1>Remote Jobs</h1>
 
     <form method="GET">
-        <input type="text" name="search" placeholder="Search jobs">
-        <input type="text" name="category" placeholder="Category">
-        <input type="text" name="company" placeholder="Company">
+        <input type="text" name="search" placeholder="Search jobs" value="{{search}}">
+        <select name="category">
+            <option value="">All</option>
+            <option value="software-dev" {% if category == "software-dev" %}selected{% endif %}>
+            <option value="design">Design</option>
+        </select>
+        <input type="text" name="company" placeholder="Company" value="{{ company}}">
 
-        <button type = "submit">Filter
+        <button type="submit">Filter
         </button>
     </form>
     <div>

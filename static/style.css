@@ -40,3 +40,65 @@ body {
     justify-content: center;
 }
 
+.filter-form input,
+.filter-form select {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #2a2a35;
+    background: #1a1a24;
+    color: #fff;
+    outline: none;
+    transition: 0.2s;
+}
+
+.filter-form input:focus,
+.filter-form select:focus {
+    border-color: #6c63ff;
+}
+
+.filter-form button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #6c63ff;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.filter-form button:hover {
+    background: #5a52e0;
+}
+
+.jobs {
+    display: grid;
+    gap: 20px;
+}
+
+.job-card {
+    background: #1a1a24;
+    padding: 20px;
+    border-radius: 14px;
+    border: 1px solid #2a2a35;
+    transition: 0.2s;
+}
+
+.job-card:hover {
+    transform: translateY(-4px);
+    border-color: #6c63ff;
+}
+
+.job-card h2 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.job-card p {
+    margin-bottom: 6px;
+    color: #bdbdcc;
+}
+
+.job-card span {
+    color: #ffffff;
+    font-weight: 500;
+}

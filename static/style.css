@@ -102,3 +102,20 @@ body {
     color: #ffffff;
     font-weight: 500;
 }
+
+.apply-btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 14px;
+    background: transparent;
+    border: 1px solid #6c63ff;
+    color: #6c63ff;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.apply-btn:hover {
+    background: #6c63ff;
+    color: white;
+}

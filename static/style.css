@@ -11,3 +11,32 @@ body {
     line-height: 1.6;
 }
 
+.header {
+    text-align: center;
+    padding: 30px 20px;
+    background: #15151d;
+    border-bottom: 1px solid #2a2a35;
+}
+
+.header h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.filters {
+    margin-bottom: 30px;
+}
+
+.filter-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+

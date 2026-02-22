@@ -102,7 +102,19 @@ body {
     color: #ffffff;
     font-weight: 500;
 }
+.job-card tags {
+    margin-top: 10px;
+}
 
+.job-card tag {
+    display: inline-block;
+    background: #eef2ff;
+    color: #3730a3;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin: 2px;
+}
 .apply-btn {
     display: inline-block;
     margin-top: 12px;
@@ -119,3 +131,4 @@ body {
     background: #6c63ff;
     color: white;
 }
+

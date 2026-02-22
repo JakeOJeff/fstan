@@ -59,6 +59,11 @@
                 <p><span>Company:</span> {{ job.company_name }}</p>
                 <p><span>Location:</span> {{ job.candidate_required_location }}</p>
 
+                <div class="tags">
+                    {% for tag in job.tags %}
+                        <span class="tag">{{ tag }}</span>
+                    {% endfor %}
+                </div>
                 <a href="{{ job.url }}" target="_blank" class="apply-btn">
                     Apply Now
                 </a>

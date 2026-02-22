@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <html>
-    <body>
-       
-        
-        <div>
-            {% for job in jobs %}
-                <div class="job">
-                    <h2>{{ job.title }}</h2>
-                    <p><strong>Company:</strong> {{ job.company_name }}</p>
-                    <p><strong>Location:</strong> {{ job.candidate_required_location }}</p>
-                    <a href="{{ job.url }}" target="_blank">Apply</a>
-                </div>
 
-            {% endfor %}
+<head>
+    <title>Jake's Job Listing</title>
+
+</head>
+
+<body>
+    <h1>Remote Jobs</h1>
+
+    <form method="GET">
+        <input type="text" name="search" placeholder="Search jobs">
+        <input type="text" name="category" placeholder="Category">
+        <input type="text" name="company" placeholder="Company">
+
+        <button type = "submit">Filter
+        </button>
+    </form>
+    <div>
+        {% for job in jobs %}
+        <div class="job">
+            <h2>{{ job.title }}</h2>
+            <p><strong>Company:</strong> {{ job.company_name }}</p>
+            <p><strong>Location:</strong> {{ job.candidate_required_location }}</p>
+            <a href="{{ job.url }}" target="_blank">Apply</a>
         </div>
-    </body>
+
+        {% endfor %}
+    </div>
+</body>
+
 </html>

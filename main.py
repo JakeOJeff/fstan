@@ -21,7 +21,7 @@ def home():
         params["company_name"] = company
 
     response = requests.get(API_URL, params=params)
-    data = requests.json()
+    data = response.json()
 
     jobs = data.get("jobs", [])
     return render_template("index.html", jobs=jobs)

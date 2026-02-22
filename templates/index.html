@@ -19,12 +19,7 @@
         <section class="filters">
             <form method="GET" class="filter-form">
 
-                <input 
-                    type="text" 
-                    name="search" 
-                    placeholder="Search jobs..." 
-                    value="{{ search }}"
-                >
+                <input type="text" name="search" placeholder="Search jobs..." value="{{ search }}">
 
                 <select name="category">
                     <option value="">All Categories</option>
@@ -36,12 +31,7 @@
                     </option>
                 </select>
 
-                <input 
-                    type="text" 
-                    name="company" 
-                    placeholder="Company..." 
-                    value="{{ company }}"
-                >
+                <input type="text" name="company" placeholder="Company..." value="{{ company }}">
 
                 <button type="submit">Filter</button>
 
@@ -61,7 +51,7 @@
 
                 <div class="tags">
                     {% for tag in job.tags %}
-                        <span class="tag">{{ tag }}</span>
+                    <span class="tag">{{ tag }}</span>
                     {% endfor %}
                 </div>
                 <a href="{{ job.url }}" target="_blank" class="apply-btn">
@@ -72,8 +62,23 @@
             {% endfor %}
 
         </section>
+        <div class="pagination">
+            {% if page > 1 %}
+            <a href="?search={{ search }}&category={{ category }}&company={{ company }}&page={{ page - 1 }}">
+                Prev
+            </a>
+            {% endif %}
 
+            <span>Page {{ page }} of {{ total_pages }}</span>
+
+            {% if page < total_pages %} <a
+                href="?search={{ search }}&category={{ category }}&company={{ company }}&page={{ page + 1 }}">
+                Next →
+                </a>
+                {% endif %}
+        </div>
     </main>
 
 </body>
+
 </html>
